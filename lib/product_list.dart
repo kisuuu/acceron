@@ -53,7 +53,10 @@ class _ProductScreenState extends State<ProductScreen> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => ProductDescriptionScreen()));
+                        builder: (context) => ProductDescriptionScreen(
+                              desp: listResponse![index]['description'],
+                              id: listResponse![index]['id'],
+                            )));
               },
               child: Card(
                 child: Column(
